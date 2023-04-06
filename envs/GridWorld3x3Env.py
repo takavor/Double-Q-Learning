@@ -4,7 +4,6 @@ from numpy import random
 
 class GridWorld3x3Env(Env):
     '''
-    
     Class defining a Grid World environment similar to the one used in Hado van Hasselt's Double Q-learning paper.
 
     The grid is 3x3, and each square corresponds to an integer index between 0 and 8.
@@ -15,7 +14,6 @@ class GridWorld3x3Env(Env):
 
     Observation space: {0, 1, ..., 8}, corresponding to the squares in the grid
     Action space: {0, 1, 2, 3}, corresponding to {UP, LEFT, RIGHT, DOWN}
-    
     '''
 
     UP = 0
@@ -33,10 +31,8 @@ class GridWorld3x3Env(Env):
 
     def step(self, action):
         '''
-
         Function applying the action to current state.
         If the action makes the agent go out of bounds, the agent remains in the same place.
-
         '''
 
         terminated = False
@@ -75,9 +71,7 @@ class GridWorld3x3Env(Env):
 
     def reset(self):
         '''
-        
         Function that resets the environment after termination.
-
         '''
         self.state = 0
         information = {}
