@@ -44,7 +44,7 @@ class GridWorld3x3Env(Env):
             reward = 10
 
         # check if currently at target
-        if self.state == 8:
+        if self.state == self.end_state:
             reward = 5
             terminated = True
         
